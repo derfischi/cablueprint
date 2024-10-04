@@ -10,19 +10,17 @@ terraform {
     }
   }
 
-  backend "azurerm" {
-    resource_group_name  = "p-vw-tfstate-weu-rg"
-    storage_account_name = "vwpcoretfstateweust"
-    container_name       = "entra-ca-policy"
-    key                  = "prod.terraform.tfstate"
-    use_azuread_auth     = true
-  }
+  # backend "azurerm" {
+  #   resource_group_name  = "<RESOURCE_GROUP_NAME>"
+  #   storage_account_name = "<STORAGE_ACCOUNT_NAME>"
+  #   container_name       = "entra-ca-policy"
+  #   key                  = "terraform.tfstate"
+  #   use_azuread_auth     = true
+  # }
 }
 
 provider "azurerm" {
-  features {
-
-  }
+  features {}
   tenant_id = var.entra_tenant_id
 }
 
