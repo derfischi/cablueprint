@@ -456,8 +456,8 @@ resource "azuread_conditional_access_policy" "CA103" {
   }
 }
 
-resource "azuread_conditional_access_policy" "CA103" {
-  display_name = "CA103 - Admins - BLOCK - High-risk admin sign-ins"
+resource "azuread_conditional_access_policy" "CA104" {
+  display_name = "CA104 - Admins - BLOCK - High-risk admin sign-ins"
   state        = "enabled"
   conditions {
     client_app_types    = ["all"]
@@ -484,8 +484,8 @@ resource "azuread_conditional_access_policy" "CA103" {
   }
 }
 
-resource "azuread_conditional_access_policy" "CA103" {
-  display_name = "CA103 - Admins - BLOCK - High-risk admin users"
+resource "azuread_conditional_access_policy" "CA105" {
+  display_name = "CA105 - Admins - BLOCK - High-risk admin users"
   state        = "enabled"
   conditions {
     client_app_types = ["all"]
